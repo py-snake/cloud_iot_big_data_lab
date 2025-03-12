@@ -1,0 +1,137 @@
+  104  # Add Docker's official GPG key:
+  105  sudo apt-get update
+  106  sudo apt-get install ca-certificates curl
+  107  sudo install -m 0755 -d /etc/apt/keyrings
+  108  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  109  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  110  # Add the repository to Apt sources:
+  111  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  112    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  113  sudo apt-get update
+  114  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  115  sudo docker run hello-world
+  116  sudo service docker start
+  117  sudo docker run hello-world
+  118  sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+  119  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  120  sudo docker run hello-world
+  121  sudo shutdown -h now
+  122  docker
+  123  docker info
+  124  sudo docker info
+  125  docker ls
+  126  docker --help
+  127  docker images
+  128  sudo docker images
+  129  sudo shutdown -h now
+  130  lynx
+  131  sudo apt install lynx
+  132  lynx google.com
+  133  sudo docker run hello-world
+  134  docker images
+  135  sudo docker images
+  136  sudo groupadd docker
+  137  sudo usermod -aG docker $USER
+  138  newgrp docker
+  139  docker run hello-world
+  140  docker run -it ubuntu bash
+  141  docker ps
+  142  docker ps -l
+  143  docker ps -a
+  144  docker run -it ubuntu bash
+  145  sudo shutdown -h now
+  146  cd docker/
+  147  docker ps
+  148  docker -it f6286f8d27ac
+  149  docker exec f6286f8d27ac -it bash
+  150  docker exec -it f6286f8d27ac bash
+  151  docker exec -it f6286f8d27ac curl localhost
+  152  netstat
+  153  sudo apt install net-tools
+  154  netstat
+  155  curl localhost
+  156  ls
+  157  mkdir docker
+  158  cd docker
+  159  ls
+  160  docker help
+  161  docker info
+  162  docker logs
+  163  docker ls
+  164  docker ps
+  165  docker help
+  166  docker run -it ubuntu bash
+  167  docker ps
+  168  docker run -it ubuntu bash
+  169  docker volume create test
+  170  ls
+  171  docker run -it ubuntu bash
+  172  docker run -v test:/app -it ubuntu bash
+  173  docker volume inspect test
+  174  sudo ls -lah /var/lib/docker/volumes/test/_data
+  175  sudo cat /var/lib/docker/volumes/test/_data/hello
+  176  docker -v /home/osboxes/docker/data:app -it ubuntu bash
+  177  docker -i -v /home/osboxes/docker/data:app ubuntu bash
+  178  docker -it -v /home/osboxes/docker/data:app ubuntu bash
+  179  docker -it -v /home/osboxes/docker/data:/app -it ubuntu bash
+  180  docker -v /home/osboxes/docker/data:/app -it ubuntu bash
+  181  docker run -v /home/osboxes/docker/data:/app -it ubuntu bash
+  182  ls
+  183  ls data
+  184  cat data/hello
+  185  nano dockerfile
+  186  mv dockerfile Dockerfile
+  187  nano dockerfile
+  188  ls
+  189  nano Dockerfile
+  190  docker build .
+  191  docker images
+  192  docker run 15af590a67cf
+  193  docker run -it 15af590a67cf
+  194  nano Dockerfile
+  195  docker build -t ubuntu-nano .
+  196  docker images
+  197  nano Dockerfile
+  198  docker images
+  199  docker build -t ubuntu-nano .
+  200  docker images
+  201  nano Dockerfile
+  202  docker build -t ubuntu-nano .
+  203  docker images
+  204  docker build -t ubuntu-nano .
+  205  docker images
+  206  docker network ls
+  207  docker network create mynet
+  208  docker network ls
+  209  docker run -p 80:80 httpd
+  210  docker run -p 80:80 nginx
+  211  docker run -p 80:80 caddy
+  212  docker run --rm ubuntu echo "helloworld"
+  213  docker ps -a
+  214  docker ps -aq
+  215  docker rm $(docker ps -aq)
+  216  docker ps -aq
+  217  docker run --rm ubuntu echo "helloworld"
+  218  docker ps -aq
+  219  docker run ubuntu echo "helloworld"
+  220  docker run --name ubuntu echo "helloworld"
+  221  docker run ubuntu echo "helloworld"
+  222  docker run ubuntu echo "helloworld"docker ps -a
+  223  docker ps -a
+  224  docker rm $(docker ps -aq)
+  225  docker ps
+  226  docker run --name ubuntu ubuntu echo "helloworld"
+  227  docker ps
+  228  docker rm $(docker ps -aq)
+  229  docker run -d --rm --name ubuntu ubuntu echo "hi"
+  230  docker logs ubuntu
+  231  docker run -d --rm --name ubuntu ubuntu echo "hi"
+  232  docker logs ubuntu
+  233  docker ps -a
+  234  docker run -d --rm --name ubuntu ubuntu echo \"asdasd\" \& \& sleep inf
+  235  docker logs ubuntu
+  236  docker ps -a
+  237  docker rm $(docker ps -aq)
+  238  sudo shutdown -h now
+  239  history
+osboxes@osboxes:~$
