@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Nginx Docker Page</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2575fc;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2575fc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1a5bbf;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Nginx Docker Page</h1>
+    <p>This is a simple, responsive HTML page served by Nginx inside a Docker container. Feel free to customize it!</p>
+    <a href="#about" class="btn">Learn More</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About This Page</h2>
+    <p>This page is hosted using Nginx, a high-performance web server, inside a Docker container. Docker makes it easy to deploy and manage applications in isolated environments.</p>
+    <p>You can use this setup to serve static websites, APIs, or any other web-based application.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 My Nginx Docker Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>

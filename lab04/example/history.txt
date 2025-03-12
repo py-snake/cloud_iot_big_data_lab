@@ -1,0 +1,14 @@
+  245  nano Dockerfile2
+  246  nano index.html
+  247  nano Dockerfile2
+  248  docker build --tag my-nginx-image --file Dockerfile2 .
+  249  docker images
+  250  docker run --detach --publish 8080:80 --name my-nginx-container my-nginx-image
+  251  docker ps
+  252  docker ps a
+  253  docker ps -a
+  254  docker ps -all
+  255  docker stop my-nginx-container
+  256  docker run --detach --publish 80:80 --name my-nginx-container my-nginx-image
+  257  docker rm --force my-nginx-container
+  258  docker run --detach --publish 80:80 --name my-nginx-container my-nginx-image

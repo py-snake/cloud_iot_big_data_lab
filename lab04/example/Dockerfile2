@@ -1,0 +1,17 @@
+# Use the official Ubuntu 24.04 as the base image
+FROM ubuntu:24.04
+
+# Set the working directory
+WORKDIR /app
+
+# Install Nginx and clean up
+RUN apt update && apt upgrade -y && apt install -y nginx && rm -rf /var/lib/apt/lists/*
+
+# Copy your custom HTML file to the Nginx web root directory
+COPY index.html /var/www/html/index.html
+
+# Expose port 80 for HTTP traffic
+EXPOSE 80
+
+# Start Nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
